@@ -1,5 +1,13 @@
-.to-do-form {
-    .user-handler {
-        
+.list-item {
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+
+    p {
+        margin:  .5rem 1rem;
+    }
+
+    button{
+        margin: auto 0;
     }
 }

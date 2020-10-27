@@ -3,13 +3,19 @@ import './ListItem.scss';
 
 const ListItem = (
     {   
-        dataInput,
-        Delete,
+        key,
+        TextInput,
+        handlerDelete
     }) => {
+        const handleRemoveItem = (e) => {
+            handlerDelete((deleteItem) => deleteItem.key === key);
+        }
+
+
         return(
-            <div >
-                <button onClick={Delete}>Delete</button>
-                <p >I am {dataInput}</p>
+            <div className="list-item" >
+                <p >I am {TextInput}</p>
+                <button onClick={handleRemoveItem}>Delete</button>
 
             </div>
             
